@@ -1,0 +1,77 @@
+---
+title: "Run the LeedAB setup wizard: provider and channels"
+description: "Walk through the LeedAB setup wizard to choose an AI provider, connect a messaging channel, set team access, and name your Artificial Beings."
+sidebarTitle: "Setup Wizard"
+---
+
+Run `leedab onboard` after installing. A LeedAB engineer pairs with your team to walk through surface enrollment, channel connection, and team access. Days 1–3 of a 14-day deployment.
+
+## Steps
+
+<Steps>
+  <Step title="Start">
+    ```bash
+    leedab onboard
+    ```
+  </Step>
+  <Step title="Choose AI models">
+    Select which models the Brain uses for reasoning, classification, and screen understanding:
+
+    - Claude (Anthropic)
+    - GPT-4o (OpenAI)
+    - Gemini (Google)
+    - DeepSeek
+    - **Local models** — fully on-device; nothing leaves the machine
+
+    For export-controlled deployments, choose local models. Model selection is a deployment-time decision and can be changed at any time without reinstalling.
+  </Step>
+  <Step title="Enroll surfaces">
+    Sign into each surface once, like a person. The Brain reuses those sessions continuously.
+
+    - SAP / S/4HANA / Oracle SCM / NetSuite
+    - Carrier TMS (Project44, FourKites, direct portals)
+    - Supplier portals (direct logins, including 2FA)
+    - Inbox (Outlook, Gmail)
+    - Compliance feeds (BIS, OFAC, EAR)
+
+    No API contracts. No IT integration tickets.
+  </Step>
+  <Step title="Connect a channel">
+    Pick where your team will reach the ABs:
+
+    - Slack
+    - Microsoft Teams
+    - WhatsApp
+    - Telegram
+
+    The wizard asks for the token or login needed to connect it.
+  </Step>
+  <Step title="Add team access">
+    Add team members and assign roles:
+
+    | Role | What they can do |
+    | --- | --- |
+    | **Owner** | Everything — settings, billing, team management |
+    | **Admin** | Manage team and ABs, not billing |
+    | **Member** | Send tasks, receive results |
+
+    For fine-grained access — buyers, planners, legal, security each seeing only their ABs — see [Access Control](/configuration/access-control).
+  </Step>
+  <Step title="Name your ABs">
+    Each AB gets a name your team will see in every reply. You can run multiple ABs with different names, each scoped to different workflows.
+  </Step>
+</Steps>
+
+## Send your first task
+
+Go to your connected channel and send a message to the AB:
+
+```text
+@compliance pre-screen PO-44218 before I send it to legal
+```
+
+The AB opens the relevant surface, does the work, and replies in the same thread — with citations and an audit link.
+
+<Tip>
+  To change your AI models or channels later, see [AI Providers](/configuration/ai-providers) and [Channels](/configuration/channels).
+</Tip>

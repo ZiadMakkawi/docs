@@ -1,0 +1,56 @@
+---
+title: "Reconcile driver deductions against client payouts"
+description: "Cross-reference what you requested against what the client deducted. Surface over-deductions, partial amounts, and pending items — broken down by driver."
+sidebarTitle: "Deduction Reconciliation"
+---
+
+Client payouts rarely match deduction requests line for line. The **POD Recon AB** compares both and surfaces exactly what's off — by driver, by category — before anyone has to ask.
+
+## AB · POD Recon
+
+|  |  |
+| --- | --- |
+| **Watches** | Carrier portals · driver apps · client POD systems |
+| **Triggers** | Short delivery · refusal · missing POD · claim window |
+| **Memory** | Per-driver and per-customer dispute history |
+| **Outputs** | Reconciled sheet · customer email · credit note draft |
+
+## What it finds
+
+| Flag | What it means |
+| --- | --- |
+| **Over-deduction** | Client took more than requested — driver is owed a refund |
+| **Partial deduction** | Client took less — remainder is still outstanding |
+| **Pending** | Not yet processed by the client |
+| **Missing POD** | Delivery record absent from client portal |
+
+## How to run it
+
+<Steps>
+  <Step title="Go to your channel">
+    Open the Slack, Teams, WhatsApp, or Telegram channel where the POD Recon AB is active.
+  </Step>
+  <Step title="Share both files">
+    Attach your original deduction request and the client's payout statement. The AB needs both.
+  </Step>
+  <Step title="Send the command">
+    ```text
+    reconcile deductions for this payout
+    ```
+  </Step>
+  <Step title="Get the reconciled sheet">
+    The AB replies with a full breakdown by driver and category — plus a customer email draft and credit note for any over-deductions.
+  </Step>
+</Steps>
+
+## What you get
+
+- Drivers flagged for over-deduction, with refund amounts
+- Outstanding partial amounts per driver
+- Pending deductions not yet applied
+- Totals by category
+- Customer email draft, ready to approve and send
+
+<Info>
+  Teams running this AB have gone from ~85% deduction recovery to 100%.
+</Info>

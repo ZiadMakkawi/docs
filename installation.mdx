@@ -1,0 +1,70 @@
+---
+title: "Install LeedAB on macOS, Linux, or Windows in minutes"
+description: "Install LeedAB on macOS, Linux, or Windows with a single command. No Docker, Kubernetes, or other dependencies required — just paste and run."
+sidebarTitle: "Installation"
+---
+
+One command installs the Brain on whatever hardware you already own. No cloud account to provision. No IT integration tickets. Your hardware, your network.
+
+## Minimum spec
+
+|  |  |
+| --- | --- |
+| **RAM** | 8 GB or more |
+| **OS** | macOS, Windows, or Linux |
+| **Disk** | 2 TB\+ recommended |
+| **Network** | Your network of choice — corporate, air-gapped, anywhere |
+
+<Note>
+  No Docker, Kubernetes, or other dependencies required. A Mac Mini handles most teams. A GPU workstation when local inference is heavier.
+</Note>
+
+## Install
+
+<Steps>
+  <Step title="Run the install command · Day 0">
+    Paste one line on the machine that will host the Brain.
+
+    <CodeGroup>
+
+    ```bash macOS / Linux
+    curl -fsSL https://leedab.com/install.sh | bash
+    ```
+
+    ```powershell Windows
+    powershell -c "irm https://leedab.com/install.ps1 | iex"
+    ```
+
+    ```bash npm (Node 22+)
+    npm install -g leedab
+    ```
+
+    </CodeGroup>
+  </Step>
+  <Step title="Verify">
+    ```bash
+    leedab --version
+    ```
+
+    If you don't see a version number, close and reopen your terminal and try again.
+  </Step>
+  <Step title="Onboard">
+    ```bash
+    leedab onboard
+    ```
+
+    The onboard wizard logs the Brain into your surfaces — SAP, carrier portals, TMS dashboards, your inbox, and any supplier portals that matter. See [Setup Wizard](/setup-wizard) for the full walkthrough.
+  </Step>
+</Steps>
+
+## What happens next
+
+| Phase | Timeline | What gets done |
+| --- | --- | --- |
+| Install | Day 0 | Brain running on your hardware |
+| Surface enrollment | Days 1–3 | Logged into SAP, TMS, portals, inbox |
+| First reports | Days 4–14 | ABs running, first reports shipped |
+
+<Tip>
+  A Mac Mini in a corner works well as a dedicated, always-on Brain. Quiet, low-power, out of the way.
+</Tip>

@@ -1,0 +1,50 @@
+---
+title: "Choose and switch AI providers: Claude, GPT, Gemini"
+description: "LeedAB works with Claude, GPT-4, Gemini, DeepSeek, and local models. Pick your provider during setup and swap at any time without reinstalling."
+sidebarTitle: "AI Providers"
+---
+
+The Brain uses a mixture of on-device models (for reasoning, classification, and screen understanding) and, where you allow it, large frontier models accessed under your contract. Model selection is a deployment-time decision — including all-local for export-controlled customers.
+
+## Options
+
+| Provider | Key required | Egress |
+| --- | --- | --- |
+| **Claude (Anthropic)** | Anthropic API key | Task instruction only |
+| **GPT-4o (OpenAI)** | OpenAI API key | Task instruction only |
+| **Gemini (Google)** | Google AI API key | Task instruction only |
+| **DeepSeek** | DeepSeek API key | Task instruction only |
+| **Local model** | None | Zero — fully on-device |
+
+<Info>
+  Local model mode runs fully offline. Nothing leaves the appliance — including the task instruction. Required for air-gapped deployments.
+</Info>
+
+## What leaves the machine
+
+With a cloud provider, the only thing transmitted is the **task instruction** — the message your team sends or the trigger the AB fires on. Your actual operational data (allocation states, portal data, supplier contracts, compliance memos) stays local.
+
+## How to set or change your provider
+
+<Steps>
+  <Step title="Open provider settings">
+    ```bash
+    leedab setup
+    ```
+
+    Or go to **Settings → AI Provider** if the Brain is already running.
+  </Step>
+  <Step title="Pick a provider">
+    Select from the list. For a local model, follow the on-screen steps to download and load it.
+  </Step>
+  <Step title="Enter your API key">
+    For cloud providers, paste your key. The Brain stores it locally, sealed in the secure element.
+  </Step>
+  <Step title="Save">
+    ABs start using the new provider immediately. No restart required.
+  </Step>
+</Steps>
+
+<Tip>
+  For export-controlled deployments, select a local model during onboarding and enable air-gap mode. You can always switch to a cloud provider for non-controlled workflows later without reinstalling.
+</Tip>

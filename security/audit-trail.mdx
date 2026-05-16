@@ -1,0 +1,68 @@
+---
+title: "View, export, and clear the LeedAB local audit log"
+description: "LeedAB logs every conversation, click, and decision locally. View, export as CSV or JSON, or delete entries — full control stays with you."
+sidebarTitle: "Audit Trail"
+---
+
+Every action an AB takes — every login, every memo drafted, every flag raised — is logged locally with cryptographic chain of custody. Exportable to your SIEM. On your machine. Not ours.
+
+## What's logged
+
+Each entry includes a timestamp, the AB that acted, and the channel the task came from.
+
+- Every task sent to an AB
+- Every surface login (portal, TMS, ERP, inbox)
+- Every action: browser clicks, form fills, file reads and writes
+- Every output returned: memos, sheets, PDFs
+- Every approval — who approved and when
+- Every flag raised and its disposition
+
+## View the log
+
+```bash
+leedab logs
+```
+
+Or go to **Settings → Audit Log** in the Brain dashboard.
+
+## Export
+
+<CodeGroup>
+
+```bash CSV
+leedab logs export --format csv
+```
+
+```bash JSON
+leedab logs export --format json
+```
+
+</CodeGroup>
+
+Saved locally. Nothing is transmitted. Compatible with SIEM ingestion.
+
+<Tip>
+  Export on a regular cadence if you need records for compliance, export control audits, or internal reviews.
+</Tip>
+
+## WORM log
+
+The audit log is append-only by default. Entries cannot be modified — only cleared by an Owner. This satisfies WORM (write once, read many) requirements for export control and procurement audit purposes.
+
+## Delete entries
+
+Go to **Settings → Audit Log → Clear History**. Delete specific entries or clear everything.
+
+<Warning>
+  Deletion is permanent. Export first if you need to retain records for compliance.
+</Warning>
+
+## Role visibility
+
+| Role | Visibility |
+| --- | --- |
+| **Owner** | Full log — all users and ABs |
+| **Admin** | Full log — all users and ABs |
+| **Member** | Their own activity only |
+
+Adjust Member visibility from **Settings → Team → Roles**.

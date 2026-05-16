@@ -1,0 +1,103 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "willow",
+  "name": "LeedAB",
+  "description": "An AI operating system for your logistics and operations team. Local on your hardware, working through the apps you already use.",
+  "colors": {
+    "primary": "#d9ddde",
+    "light": "#d9ddde",
+    "dark": "#d9ddde"
+  },
+  "favicon": "https://media.brand.dev/d2be0934-6001-432d-9ec3-aa13a22e3543.png",
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Home",
+          "icon": "house",
+          "href": "/"
+        },
+        {
+          "anchor": "Contact",
+          "icon": "life-buoy",
+          "href": "https://www.leedab.com/contact"
+        }
+      ]
+    },
+    "directory": "card",
+    "groups": [
+      {
+        "group": "Get Started",
+        "icon": "rocket",
+        "expanded": true,
+        "pages": [
+          "introduction",
+          "installation",
+          "setup-wizard"
+        ]
+      },
+      {
+        "group": "Core Concepts",
+        "icon": "brain",
+        "expanded": true,
+        "pages": [
+          "concepts/artificial-beings",
+          "concepts/computer-use",
+          "concepts/channels"
+        ]
+      },
+      {
+        "group": "Workflows",
+        "icon": "workflow",
+        "expanded": true,
+        "pages": [
+          "workflows/credit-notes",
+          "workflows/deduction-reconciliation",
+          "workflows/attendance-import",
+          "workflows/delay-detection",
+          "workflows/custom-workflows"
+        ]
+      },
+      {
+        "group": "Configuration",
+        "icon": "settings",
+        "expanded": true,
+        "pages": [
+          "configuration/ai-providers",
+          "configuration/channels",
+          "configuration/access-control"
+        ]
+      },
+      {
+        "group": "Security & Privacy",
+        "icon": "shield",
+        "expanded": true,
+        "pages": [
+          "security/data-storage",
+          "security/audit-trail",
+          "security/faq"
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Request Demo",
+      "href": "https://www.leedab.com/contact"
+    }
+  },
+  "footer": {
+    "socials": {}
+  }
+}

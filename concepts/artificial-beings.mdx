@@ -1,0 +1,71 @@
+---
+title: "Artificial Beings: autonomous agents that do real work"
+description: "Artificial Beings are LeedAB's autonomous agents. Unlike chatbots, they complete real operational tasks — logging in, filling forms, and returning results."
+sidebarTitle: "Artificial Beings"
+---
+
+Artificial Beings (ABs) are agentic workflow units that run inside the [Brain](/concepts/computer-use). Each one owns a specific procurement loop — allocation, export compliance, POD reconciliation, deductions, supplier risk — with persistent memory, continuous monitoring, and a full audit trail.
+
+They are not chatbots. They do not answer questions. They do the work.
+
+## Five ABs ship out of the box
+
+| AB | Role | Watches | Outputs |
+| --- | --- | --- | --- |
+| **Control Tower** | Reconciles allocation across supplier commits, carrier capacity, and customer commitments | Supplier portals · carrier TMS · inbound ETAs · PCNs | Live state · weekly digest · escalation memo |
+| **POD Recon** | Flags shorted, refused, and undelivered loads same-day | Carrier portals · driver apps · client POD systems | Reconciled sheet · customer email · credit note draft |
+| **Deductions** | Sorts monthly deduction batches, produces numbered credit notes, reconciles by driver | Client deduction sheets · monthly invoices · driver records | Numbered PDFs · summary spreadsheet · refund queue |
+| **Risk Monitor** | Walks your supplier map to tier 2 and tier 3, watches for geopolitical and disaster exposure | Tier-2/3 supplier moves · fab geographies · NHC · USGS | Exposure report · second-source recommendation |
+| **Compliance** | Pre-flights every order against BIS Entity List, OFAC SDN, EAR ECCN, FDP rule, and customs filings | BIS · OFAC · EAR · FDP · HTS/HS · ACE | Pass / flag / escalate · memo with citations |
+
+Custom ABs are scoped and shipped in **1–2 weeks**.
+
+## How an AB handles a task
+
+<Steps>
+  <Step title="Trigger">
+    A team member sends a task in Slack, Teams, WhatsApp, or Telegram — or the AB triggers itself from a watched surface.
+  </Step>
+  <Step title="The AB opens the right surface">
+    It logs into the relevant portal, TMS, ERP, or inbox — the same way your buyer would, including 2FA.
+  </Step>
+  <Step title="Work">
+    Pulls records, reconciles data, fills forms, drafts memos — using the same tools your team uses. No APIs.
+  </Step>
+  <Step title="Output">
+    Returns the result in the same thread: a summary, attached files, and any flags that need a decision.
+  </Step>
+  <Step title="Approval loop">
+    For anything requiring sign-off, the AB waits inline. Reply "approve" and it continues. Every decision is logged.
+  </Step>
+</Steps>
+
+<Note>
+  ABs run 24/7 with persistent memory. They remember the last state of every supplier commit, every driver's dispute history, and every open deduction — across sessions.
+</Note>
+
+## AB vs. chatbot
+
+|  | Chatbot | Artificial Being |
+| --- | --- | --- |
+| Answers questions | Yes | When useful |
+| Opens portals and apps | No | Yes |
+| Logs into systems with 2FA | No | Yes |
+| Holds persistent memory | No | Yes |
+| Produces files and reports | No | Yes |
+| Maintains an audit trail | No | Yes |
+| Triggers from watched surfaces | No | Yes |
+
+## Custom ABs
+
+Bring any procurement or operations loop you'd rather not run by hand. LeedAB solutions engineering works with your team for 1–2 weeks to build a new AB with its own watchers, triggers, memory, and audit trail. Included with the production tier.
+
+<CardGroup cols={2}>
+  <Card title="Computer use" icon="monitor" href="/concepts/computer-use">
+    How ABs operate portals and ERPs without API integrations.
+  </Card>
+
+  <Card title="Channels" icon="message-circle" href="/concepts/channels">
+    How your team sends tasks — Slack, Teams, WhatsApp, or Telegram.
+  </Card>
+</CardGroup>

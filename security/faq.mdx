@@ -1,0 +1,54 @@
+---
+title: "LeedAB security FAQ: data, encryption, and control"
+description: "Answers to the most common questions about data storage, AI access, encryption, team controls, and removal before deploying LeedAB in your operation."
+sidebarTitle: "Security FAQ"
+---
+
+Eight questions we get on every call. If your question isn't here, your solutions engineer will answer it on the kickoff call.
+
+<AccordionGroup>
+  <Accordion title="Where does our data live?">
+    Inside the appliance that sits in your office, behind your firewall, on the network you choose. Nothing is shipped to a LeedAB cloud. There isn't one. For air-gapped deployments, internet egress is physically blocked at the appliance.
+  </Accordion>
+
+  <Accordion title="What does the AI provider actually see?">
+    Only the task instruction — the message your team sends or the trigger the AB fires on. Your spreadsheets, portal data, supplier contracts, and compliance memos are read and written locally. The AI provider gets the instruction, not the content.
+
+    In air-gap mode with local models, nothing leaves the appliance at all.
+  </Accordion>
+
+  <Accordion title="Can we use LeedAB on export-controlled data?">
+    Yes. The Compliance AB was built first for exactly this reason. In air-gap mode, models, weights, and tooling are pre-baked into the appliance and the Brain does not call out. Every classification, citation, and memo is produced on-device.
+  </Accordion>
+
+  <Accordion title="What encryption is used?">
+    - **At rest:** AES-256 with hardware-backed keys sealed in the secure element — logs, task history, documents, credentials, config
+    - **In transit:** TLS — between Brain and AI provider, cloud-connected deployments only
+
+    Credentials are FileVault-class encrypted. The encryption key never leaves the appliance's secure element.
+  </Accordion>
+
+  <Accordion title="What is the audit trail?">
+    Every action an AB takes — every login, every memo drafted, every flag raised — is logged locally with cryptographic chain of custody. The log is WORM (append-only). Exportable to your SIEM via `leedab logs export`.
+
+    See [Audit Trail](/security/audit-trail) for the full reference.
+  </Accordion>
+
+  <Accordion title="Who on our team can see what?">
+    Three roles with SAML, SCIM, and MFA support:
+
+    - **Owner** — everything: activity, settings, billing
+    - **Admin** — everything except billing
+    - **Member** — their own activity only
+
+    Approvals are scoped, time-bounded, and revocable from your SSO. Adjust from **Settings → Team → Roles**.
+  </Accordion>
+
+  <Accordion title="Why hardware? What runs the Brain?">
+    Because the buyer we serve will not accept a cloud-hosted agent reading SAP and BIS. The hardware boundary is the security model. The Brain runs on whatever fits your room and your model needs — a quiet Mac Mini for most teams, a GPU workstation when local inference is heavier. Minimum spec is 8 GB RAM on macOS, Windows, or Linux.
+  </Accordion>
+
+  <Accordion title="How do I remove LeedAB?">
+    Stop the Brain process, uninstall the app, and delete the local data folder. Everything is gone. Nothing was ever stored in a LeedAB cloud — there isn't one.
+  </Accordion>
+</AccordionGroup>

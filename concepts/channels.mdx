@@ -1,0 +1,52 @@
+---
+title: "Send tasks to LeedAB via Telegram, WhatsApp, or Slack"
+description: "Connect LeedAB to the messaging app your team already uses. Send tasks, receive results, and approve actions without switching tools."
+sidebarTitle: "Channels"
+---
+
+ABs meet your team in the channels they already live in. No new app. No new login. Your procurement engineers stay in Slack; your dispatchers stay in WhatsApp. The AB is one @mention away.
+
+## Supported channels
+
+| Channel | Best for |
+| --- | --- |
+| **Slack** | Procurement and sourcing teams — threaded replies, inline approvals, file attachments |
+| **Microsoft Teams** | Enterprise deployments already on M365 |
+| **WhatsApp** | Field teams, logistics operators, drivers |
+| **Telegram** | Dispatch and back-office, POD confirmation, deduction workflows |
+
+## What a channel interaction looks like
+
+```text
+Diana M. · #procurement-screen · 9:14
+@compliance can you pre-screen PO-44218 before I send it to legal?
+It's the Astera order with the new EU distributor.
+
+Export-Compliance AB · 9:14
+Pulled the line items. Screened against BIS, EAR, and FDP. One flag.
+The distributor's freight-forwarder routes through an entity affiliated
+with a 1769 BIS add (Jan 2026).
+
+  Part      LDB-AL-7300-A · 240 units
+  ECCN      3A090.a · controlled
+  End-use   AI training cluster · cleared
+  FDP rule  Not triggered
+  Entity    Forwarder · affiliated · Jan 2026 add
+
+  [Block & escalate]  [Re-route]  [Open memo]
+
+Diana M. · 9:15
+Re-route through DHL CN. Update legal with the memo.
+```
+
+Every AB reply includes citations and an audit link. Every approval is logged.
+
+## How ABs appear in channels
+
+ABs appear as named users in your workspace or group — for example, **Export-Compliance AB** or a custom name you set during [onboarding](/setup-wizard). Your team @mentions them the same way they'd @mention a colleague.
+
+<Note>
+  No one needs a new app or a new login. ABs join the surfaces your team already has on their phone or computer.
+</Note>
+
+See [Channel configuration](/configuration/channels) for step-by-step connection instructions.

@@ -1,0 +1,41 @@
+---
+title: "Normalize driver attendance from any client format"
+description: "Send LeedAB attendance files in whatever format your clients use. It normalizes everything into one clean sheet with automatic flags for problem drivers."
+sidebarTitle: "Attendance Import"
+---
+
+Every client sends attendance differently. The AB takes whatever format arrives, normalizes it, and returns one clean, consistent sheet — with problem drivers flagged. No reformatting on your end.
+
+## How to run it
+
+<Steps>
+  <Step title="Collect the files">
+    Get attendance exports from your clients as they arrive. No reformatting needed.
+  </Step>
+  <Step title="Attach them in your channel">
+    Drop the files into your Slack, Teams, WhatsApp, or Telegram channel. Send multiple files at once.
+  </Step>
+  <Step title="Send the command">
+    ```text
+    import attendance for October
+    ```
+  </Step>
+  <Step title="Get the clean sheet">
+    One normalized attendance sheet covering all drivers, with problem drivers flagged automatically.
+  </Step>
+</Steps>
+
+## Output
+
+| Field | What it shows |
+| --- | --- |
+| **Days present** | Total days worked per driver |
+| **Absences** | Total absent days per driver |
+| **Late arrivals** | Total late-arrival incidents |
+| **Flagged drivers** | 5\+ absences · 3\+ late arrivals · data inconsistencies |
+
+The output sheet stays on your machine. Nothing is uploaded.
+
+<Tip>
+  Send files exactly as your clients provide them — Excel, CSV, PDF export, whatever. The AB handles normalization.
+</Tip>

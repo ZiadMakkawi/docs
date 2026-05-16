@@ -1,0 +1,49 @@
+---
+title: "Generate per-deduction credit note PDFs with LeedAB"
+description: "Turn a raw deduction sheet into numbered PDFs and a category summary. LeedAB matches your own credit-note template — header, colors, and columns."
+sidebarTitle: "Credit Notes"
+---
+
+The **Deductions AB** watches your client deduction sheets. The moment a monthly batch lands, it sorts each line into a category, produces numbered credit notes, and reconciles the summary by driver and category. Your header, colors, and columns — exactly as they are.
+
+## AB · Deductions
+
+|  |  |
+| --- | --- |
+| **Watches** | Client deduction sheets · monthly invoices · driver records |
+| **Triggers** | New deduction batch · dispute window · refund pending |
+| **Owns** | Credit note numbering · category math · audit log |
+| **Outputs** | Numbered PDFs · summary spreadsheet · refund queue |
+
+## How to run it
+
+<Steps>
+  <Step title="Go to your channel">
+    Open the Slack, Teams, WhatsApp, or Telegram channel where the Deductions AB is active.
+  </Step>
+  <Step title="Attach the deduction sheet">
+    Paste or attach the file. The AB handles any format your client sends.
+  </Step>
+  <Step title="Send the command">
+    ```text
+    generate credit notes for October
+    ```
+  </Step>
+  <Step title="Get your output">
+    The AB replies with one numbered PDF per deduction and a summary sheet. Ready to forward to the client.
+  </Step>
+</Steps>
+
+## Output
+
+| Item | Description |
+| --- | --- |
+| **Numbered PDFs** | One per deduction — lost shipments, traffic fines, vehicle damage, SIMs |
+| **Summary sheet** | All deductions reconciled by driver and category |
+| **Refund queue** | Flagged items pending client action |
+
+All three use your template exactly. Everything stays on your machine.
+
+<Tip>
+  Before the first run, make sure your credit-note template is on the machine running the Brain. The AB reads it once and reuses it every time.
+</Tip>

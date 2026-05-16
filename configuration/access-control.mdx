@@ -1,0 +1,67 @@
+---
+title: "Manage team access: Owner, Admin, and Member roles"
+description: "LeedAB has three roles — Owner, Admin, and Member. Add team members, assign roles, and control who can send tasks, change settings, or manage billing."
+sidebarTitle: "Access Control"
+---
+
+Every team member gets a role. Approvals are scoped, time-bounded, and revocable from your SSO. Buyers, planners, legal, and security each see only the surfaces and ABs they're cleared for.
+
+## Roles
+
+| Role | Send tasks | View results | Manage ABs | Manage team | Billing |
+| --- | --- | --- | --- | --- | --- |
+| **Owner** | ✓ | ✓ | ✓ | ✓ | ✓ |
+| **Admin** | ✓ | ✓ | ✓ | ✓ | — |
+| **Member** | ✓ | Own activity | — | — | — |
+
+One Owner per installation. Admins can manage everything except billing. Members can send tasks and see their own results.
+
+## SSO
+
+SAML, SCIM, and MFA are supported. Connect your IdP from **Settings → Security → SSO**.
+
+## Add a team member
+
+<Steps>
+  <Step title="Open team settings">
+    ```bash
+    leedab setup
+    ```
+
+    Or go to **Settings → Team** if the Brain is already running.
+  </Step>
+  <Step title="Enter their details">
+    Name and messaging handle (Slack ID, Teams UPN, Telegram username, or WhatsApp number).
+  </Step>
+  <Step title="Pick a role">
+    Owner, Admin, or Member.
+  </Step>
+  <Step title="Save">
+    They can send tasks immediately.
+  </Step>
+</Steps>
+
+## Change a role
+
+1. Go to **Settings → Team**.
+2. Find the person.
+3. Pick a new role and save.
+
+Takes effect on their next message.
+
+## AB-level permissions
+
+You can restrict which ABs a Member can reach. For example, legal sees Compliance only; dispatch sees POD Recon and Control Tower only.
+
+Configure from **Settings → Team → \[Member\] → AB Access**.
+
+## Remove a member
+
+1. Go to **Settings → Team**.
+2. Find the person and click **Remove**.
+
+Their messages will no longer get a response.
+
+<Note>
+  If someone changes their Slack handle, Teams UPN, phone number, or Telegram account, update it in **Settings → Team** or the Brain won't recognize them.
+</Note>

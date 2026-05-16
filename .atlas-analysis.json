@@ -1,0 +1,79 @@
+{
+  "projectType": "saas",
+  "projectName": "LeedAB",
+  "projectDescription": "An AI operating system that runs your logistics and operations workflows locally on your hardware — no APIs, no cloud, no IT project.",
+  "theme": "willow",
+  "primaryColor": "#d9ddde",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "setup-wizard"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/artificial-beings",
+              "concepts/computer-use",
+              "concepts/channels"
+            ]
+          },
+          {
+            "group": "Workflows",
+            "pages": [
+              "workflows/credit-notes",
+              "workflows/deduction-reconciliation",
+              "workflows/attendance-import",
+              "workflows/delay-detection",
+              "workflows/custom-workflows"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/ai-providers",
+              "configuration/channels",
+              "configuration/access-control"
+            ]
+          },
+          {
+            "group": "Security & Privacy",
+            "pages": [
+              "security/data-storage",
+              "security/audit-trail",
+              "security/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Computer use — operates browsers and desktop apps the way a human would, with no APIs needed",
+    "Local-first — all data stays on your hardware, encrypted at rest with AES-256",
+    "Messaging-native — teams interact via WhatsApp, Telegram, or Slack with 24/7 availability",
+    "One-command install — live in 10 minutes, no Docker, no Kubernetes, no IT project",
+    "Built-in logistics workflows — credit notes, deduction reconciliation, attendance import, delay detection",
+    "Custom workflows — walk LeedAB through any workflow once and it runs it every time",
+    "Multi-provider AI — supports Claude, GPT, Gemini, DeepSeek, and local models",
+    "Role-based access — Owner, Admin, and Member roles with full audit trail"
+  ],
+  "publicApiSurface": [
+    "install command (curl/npm one-liner)",
+    "setup wizard (AI provider, messaging channel, team access, Being names)",
+    "workflow commands: >generate credit notes, >reconcile deductions, >import attendance",
+    "messaging interface via Telegram / WhatsApp / Slack",
+    "role management: owner, admin, member",
+    "audit log (local, inspectable, exportable, deletable)",
+    "AI provider config (Claude, GPT, Gemini, DeepSeek, local models)"
+  ]
+}

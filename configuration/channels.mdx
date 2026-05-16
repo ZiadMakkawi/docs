@@ -1,0 +1,54 @@
+---
+title: "Connect Telegram, WhatsApp, or Slack for LeedAB tasks"
+description: "Link Telegram, WhatsApp, or Slack so your team can send tasks to LeedAB directly from the apps they already use — no new login or app required."
+sidebarTitle: "Channels"
+---
+
+Your team stays where they are. ABs join the channels your procurement engineers, dispatchers, and operations teams already use. No new app. No new login.
+
+## Which channel to use
+
+| Channel | Works well for |
+| --- | --- |
+| **Slack** | Procurement, sourcing, and compliance teams — threaded replies, inline approvals |
+| **Microsoft Teams** | Enterprise deployments on M365 — channel posts, DMs, adaptive cards |
+| **WhatsApp** | Field teams, logistics operators, drivers, back-office |
+| **Telegram** | Dispatch and operations — file attachments, inline approvals, bots |
+
+## How to connect
+
+<Steps>
+  <Step title="Open channel settings">
+    ```bash
+    leedab setup
+    ```
+
+    Or go to **Settings → Channels** if the Brain is already running.
+  </Step>
+  <Step title="Pick your channel">
+    Select Slack, Teams, WhatsApp, or Telegram.
+  </Step>
+  <Step title="Authorize">
+    - **Slack** — click the OAuth link and approve the Brain in your workspace.
+    - **Microsoft Teams** — install the LeedAB app from the Teams App Store and authorize.
+    - **WhatsApp** — scan the QR code with your phone.
+    - **Telegram** — create a bot via [@BotFather](https://t.me/BotFather), copy the token, paste it in.
+  </Step>
+  <Step title="Test it">
+    Send a message to the AB. You should get a reply in a few seconds. If not, re-run setup and check the channel step.
+  </Step>
+</Steps>
+
+<Tip>
+  No new logins for anyone. ABs join the surfaces your team already has on their phone or desktop.
+</Tip>
+
+## Who can send tasks
+
+Only people you've added in [Access Control](/configuration/access-control) will get a response. ABs ignore messages from unrecognized handles.
+
+## Multiple channels
+
+Connect all four at once — for example, procurement on Slack, compliance on Teams, dispatchers on Telegram, drivers on WhatsApp. All channels reach the same ABs and workflows.
+
+To add another channel: **Settings → Channels → Add Channel**.

@@ -1,0 +1,93 @@
+---
+title: "LeedAB: AI operating system for logistics operators"
+description: "LeedAB runs locally on your hardware, requires no APIs or cloud setup, and lets your team assign tasks through WhatsApp, Telegram, or Slack."
+sidebarTitle: "Introduction"
+---
+
+LeedAB is the AI operating layer for supply chain and logistics teams. It runs as a local agent system — the **Brain** — inside your office, on hardware you already own. Five **Artificial Beings** ship out of the box. Each one owns a specific procurement loop, with memory, monitoring, and a paper trail.
+
+No API integrations. No cloud uploads. Your data does not leave the room.
+
+<CardGroup cols={3}>
+  <Card title="Installation" icon="terminal" href="/installation">
+    One command. Live in minutes on any Mac, Windows, or Linux box.
+  </Card>
+
+  <Card title="Artificial Beings" icon="cpu" href="/concepts/artificial-beings">
+    Five ABs ship out of the box. Custom ABs in 1–2 weeks.
+  </Card>
+
+  <Card title="Security" icon="shield-check" href="/security/data-storage">
+    AES-256 at rest. Air-gappable. Zero egress.
+  </Card>
+</CardGroup>
+
+## The gap
+
+The work between portals is where supply chains break.
+
+<CardGroup cols={3}>
+  <Card title="5 days" icon="clock">
+    Median time between PO issuance and legal sign-off on a single allocation commit.
+  </Card>
+
+  <Card title="70%" icon="eye-off">
+    Share of tier-2 and tier-3 supply base that procurement leaders report having no real-time visibility into.
+  </Card>
+
+  <Card title="1×/week" icon="table">
+    Typical cadence at which carrier and supplier capacity states are reconciled by hand into a single spreadsheet.
+  </Card>
+</CardGroup>
+
+## How it works
+
+Live in days, not months.
+
+<Steps>
+  <Step title="Install · Day 0">
+    An appliance ships to your office, or runs on hardware you already own — any spare Mac, Windows PC, or Linux box. No cloud account to provision.
+
+    ```bash macOS / Linux
+    curl -fsSL https://leedab.com/install.sh | bash
+    ```
+
+    ```powershell Windows
+    powershell -c "irm https://leedab.com/install.ps1 | iex"
+    ```
+
+    ```bash npm
+    npm install -g leedab
+    ```
+  </Step>
+  <Step title="Connect · Days 1–3">
+    Sign in once, like a person. A LeedAB engineer pairs with your team to log the Brain into SAP, carrier portals, TMS dashboards, your inbox, and any supplier portals that matter. No API contracts. No IT integration tickets.
+  </Step>
+  <Step title="Work · Days 4–14">
+    Five ABs wake up. The control tower starts reconciling allocation. The screener starts pre-flighting orders. The follow-up agent starts chasing commits. Your team meets them in Slack, Teams, WhatsApp, or Telegram — as colleagues.
+  </Step>
+</Steps>
+
+## Deployment
+
+<CardGroup cols={2}>
+  <Card title="Form factor" icon="server">
+    On-prem appliance on your hardware — macOS, Windows, or Linux.
+  </Card>
+
+  <Card title="Surfaces" icon="layers">
+    ERP · TMS · Portals · Inbox · Sheets · 12\+ surfaces, no APIs required.
+  </Card>
+
+  <Card title="Agents" icon="users">
+    5 ABs in-box. Custom ABs on request, shipped in 1–2 weeks.
+  </Card>
+
+  <Card title="Data egress" icon="lock">
+    Zero. Stays on your network. Air-gappable for export-controlled customers.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Minimum spec:** 8 GB RAM on macOS, Windows, or Linux. A Mac Mini handles most teams. A GPU workstation when local inference is heavier.
+</Note>

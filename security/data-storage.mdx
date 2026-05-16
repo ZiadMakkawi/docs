@@ -1,0 +1,56 @@
+---
+title: "How LeedAB stores your operational data with AES-256"
+description: "All operational data LeedAB processes stays on your machine, encrypted at rest with AES-256. Nothing leaves your hardware without your explicit approval."
+sidebarTitle: "Data Storage"
+---
+
+The Brain runs on hardware that physically lives inside your office, behind your firewall. Your allocation data, supplier contracts, export memos — they do not leave the room.
+
+## What stays on your machine
+
+- Supplier commits and allocation states
+- Carrier capacity data and portal credentials
+- Proof of delivery records
+- Deduction sheets and credit note PDFs
+- Export screening memos and compliance citations
+- Every document an AB reads or writes
+- Full audit log with cryptographic chain of custody
+
+## What leaves your machine
+
+Only the **task instruction** — the message your team sends, or the trigger the AB fires on.
+
+Your actual operational data stays local. In cloud-connected deployments, the AI provider receives the instruction, not the content. In air-gap mode, nothing leaves at all.
+
+## Encryption
+
+| Layer | Standard | What it covers |
+| --- | --- | --- |
+| **At rest** | AES-256 · Secure Enclave | Logs · task history · documents · credentials · config |
+| **In transit** | TLS | Between Brain and AI provider (cloud-connected deployments only) |
+
+Credentials are sealed against a key that never leaves the appliance's secure element — FileVault-class disk encryption with hardware-backed keys.
+
+## Air-gap mode
+
+For export-controlled customers, the Brain runs without internet egress. Models, weights, and tooling are pre-baked into the appliance and updated by signed image. Zero calls out. Nothing transmitted.
+
+```bash
+# Enable air-gap mode during onboarding
+leedab onboard --air-gap
+```
+
+## Hardware
+
+|  |  |
+| --- | --- |
+| **Form factor** | Mac · Windows · Linux — any hardware you already own |
+| **Disk** | Encrypted · 2TB\+ recommended |
+| **Network** | Your network of choice — corporate, air-gapped, anywhere |
+| **Egress** | Optional · zero in air-gap mode |
+| **Models** | On-device · pre-baked |
+| **Updates** | Signed image · customer-approved |
+
+<Note>
+  To remove LeedAB completely: delete the app and its local data folder. Everything is gone. Nothing was ever stored in a LeedAB cloud — there isn't one.
+</Note>
